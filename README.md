@@ -1,7 +1,7 @@
 Languages Used:
 -
 **Frontend:** HTML, CSS <br />
-**Backend:** Nojdejs, express.js <br />
+**Backend:** Node.js, express.js <br />
 **Database:**  Mongodb <br />
 
 Installation
