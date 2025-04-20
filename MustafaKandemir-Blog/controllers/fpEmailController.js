@@ -57,13 +57,13 @@ exports.forgetPassMailCheck = async(req, res) => {
             let transporter = nodemailer.createTransport({
                 service : 'gmail',
                 auth: {
-                    user : 'mustafakndmr270@gmail.com',
-                    pass : 'zvhh eayv fvcr zzqg' 
+                    user : 'YOUR_MAIL',
+                    pass : 'YOUR_MAIL_PASSWORD' 
                 }
             });
         
             let mailOptions = {
-                from: 'mustafakndmr270@gmail.com',
+                from: 'YOUR_MAIL',
                 to: userEmail,
                 subject: "HOŞGELDİNİZ",
                 html: `<h3>Merhaba ${userName},</h3><p>Onay kodunuz: <strong>${onayKodu}</strong></p>`
