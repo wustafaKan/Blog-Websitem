@@ -14,7 +14,7 @@ exports.sendEmail = (req, res) => {
 
     const mailOptions = {
         from : userEmail,
-        to : 'mustafakndmr270@gmail.com',
+        to : 'YOUR_MAIL',
         subject: `Yeni mesaj: ${userName}`,
         text: userMessage
     };
