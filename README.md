@@ -38,3 +38,21 @@ Screenshots:
 ![image](https://github.com/user-attachments/assets/b8adbf86-363c-4772-8212-fe22e09efc12)
 
 
+<h2 align='Center'> Main Page </h2>
+
+![image](https://github.com/user-attachments/assets/748da450-2fe4-4a6d-959c-a656a3062ab7)
+
+<br />
+
+<h2 align='Center'> Communication Page </h2>
+
+![image](https://github.com/user-attachments/assets/ea35c772-f76b-4feb-a096-1c8ace7cbbd7)
+
+<br />
+
+<h2 align='Center'> Blog Page </h2>
+
+![image](https://github.com/user-attachments/assets/7c66f798-fd96-484f-bd9c-ba99326291b3)
+
+<br />
+
