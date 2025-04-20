@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>MustafaKandemir/Projeler</title>
+
+    <style>
+                @media (min-width: 1200px) {
+            
+            .section_1 {
+                display: flex;
+                flex-direction: column; 
+                align-items: start; 
+                justify-content: start;
+                padding: 20px 100px;
+            }
+
+            .section_2 {
+                display: flex;
+                flex-direction: column;
+                align-items: start; 
+                justify-content: center;
+                padding: 30px 100px;
+                gap: 40px; /* Add consistent spacing between blog cards */
+            }
+
+            .card-projects {
+                border-style: none;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                width: 100%;
+                max-width: 1200px;
+                margin-bottom: 30px;
+                transition: transform 0.3s ease;
+            }
+
+            .card-projects:hover {
+                transform: scale(1.02);
+            }
+
+            .card-projects img {
+                width: 100%; 
+                height: 300px; /* Fixed height for consistent sizing */
+                max-width: 500px; 
+                object-fit: cover; 
+                border-radius: 15px; /* Optional: add rounded corners */
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: add subtle shadow */
+            }
+
+            .text-and-tags-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                margin-left: 30px;
+                flex-grow: 1;
+            }
+
+            .projectsTexts-projects {
+                text-align: left;
+                width: 100%;
+            }
+
+            .projectsTexts-projects h2 {
+                color: #111111;
+                font-size: 36px;
+                margin-bottom: 10px;
+                transition: color 0.3s;
+            }
+
+            .projectsTexts-projects h2:hover {
+                color: #666;
+            }
+
+            .projectsTexts-projects p {
+                color: #333333;
+                font-size: 28px;
+                line-height: 1.5;
+                margin-bottom: 15px;
+                margin-top: 30px;
+            }
+
+            .card-projects .tags-container-projects {
+                display: flex;
+                justify-content: flex-start;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            .card-projects .tags-container-projects span {
+                background-color: #333333;
+                color: #ffffff;
+                font-size: 22px;
+                padding: 3px 8px;
+                border-radius: 8px;
+                transition: background-color 0.3s;
+            }
+
+            .card-projects .tags-container-projects span:hover {
+                background-color: #555;
+                color: #FFD700;
+            }
+
+            #projectLink {
+                align-self: flex-start;
+                color: #333333;
+                font-size: 28px;
+                text-decoration: none;
+                margin-top: 15px;
+                transition: color 0.3s;
+            }
+
+            #projectLink:hover {
+                color: #666;
+                text-decoration: underline;
+            }
+        }
+
+
+        @media (min-width: 850px) {
+            
+            .section_1 {
+                display: flex;
+                flex-direction: column; 
+                align-items: start; 
+                justify-content: start;
+                padding: 20px 100px;
+            }
+
+            .section_2 {
+                display: flex;
+                flex-direction: column;
+                align-items: start; 
+                justify-content: center;
+                padding: 30px 100px;
+                gap: 40px; /* Add consistent spacing between blog cards */
+            }
+
+            .card-projects {
+                border-style: none;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                width: 100%;
+                max-width: 1200px;
+                margin-bottom: 30px;
+                transition: transform 0.3s ease;
+            }
+
+            .card-projects:hover {
+                transform: scale(1.02);
+            }
+
+            .card-projects img {
+                width: 100%; 
+                height: 300px; /* Fixed height for consistent sizing */
+                max-width: 500px; 
+                object-fit: cover; 
+                border-radius: 15px; /* Optional: add rounded corners */
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: add subtle shadow */
+            }
+
+            .text-and-tags-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                margin-left: 30px;
+                flex-grow: 1;
+            }
+
+            .projectsTexts-projects {
+                text-align: left;
+                width: 100%;
+            }
+
+            .projectsTexts-projects h2 {
+                color: #111111;
+                font-size: 36px;
+                margin-bottom: 10px;
+                transition: color 0.3s;
+            }
+
+            .projectsTexts-projects h2:hover {
+                color: #666;
+            }
+
+            .projectsTexts-projects p {
+                color: #333333;
+                font-size: 28px;
+                line-height: 1.5;
+                margin-bottom: 15px;
+            }
+
+            .card-projects .tags-container-projects {
+                display: flex;
+                justify-content: flex-start;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            .card-projects .tags-container-projects span {
+                background-color: #333333;
+                color: #ffffff;
+                font-size: 22px;
+                padding: 3px 8px;
+                border-radius: 8px;
+                transition: background-color 0.3s;
+            }
+
+            .card-projects .tags-container-projects span:hover {
+                background-color: #555;
+                color: #FFD700;
+            }
+
+            #projectLink {
+                align-self: flex-start;
+                color: #333333;
+                font-size: 28px;
+                text-decoration: none;
+                margin-top: 15px;
+                transition: color 0.3s;
+            }
+
+            #projectLink:hover {
+                color: #666;
+                text-decoration: underline;
+            }
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 849px) {
+
+            .section_2 {
+                padding: 20px 10px;
+            }
+
+            .card-projects {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .card-projects img {
+                max-width: 100%;
+                height: 250px;
+                margin-bottom: 15px;
+            }
+
+            .text-and-tags-container {
+                margin-left: 0;
+                align-items: center;
+            }
+
+            .projectsTexts-projects {
+                text-align: center;
+            }
+
+            .card-projects .tags-container-projects {
+                justify-content: center;
+            }
+
+            #projectLink {
+                align-self: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/index">Mustafa Kandemir</a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+                <% if (cookies.admin_token && !cookies.token) { %>
+                    <li><a href="/adminPage">Admin Paneli</a></li>
+                <% } %>
+                <li><a href="/projelerim">Projeler</a></li>
+                <li><a href="/blogs">Blog</a></li>
+                <li><a href="/iletisim">İletişim</a></li>
+                <% if (cookies.token || cookies.admin_token) { %> 
+                    <li><a href="/logout">Çıkış</a></li>
+                <% } else { %>
+                    <li><a href="/login">Giriş / Kayıt Ol</a></li>
+                <% } %>
+            </ul>
+        </nav>    
+    </header>
+
+    <section class="section_1">
+        <h2>Blog Yazıları</h2>
+
+    
+    </section>
+
+    <section class="section_2">
+        <% blogs.forEach(blog => { %>
+            <div class="card-projects">
+                <a href="/blogs/<%= blog.title %>">
+                    <% if (blog.image) { %>
+                        <img src="<%= blog.image %>" alt="Blog Görseli">
+                    <% } else { %>
+                        <img src="/blogs/<%= blog.title %>/images/default-image.png" alt="Varsayılan Blog Görseli">
+                    <% } %>
+                </a>
+                <div class="text-and-tags-container">
+                    <div class="projectsTexts-projects">
+                        <h2><%= blog.title %></h2>
+                        <p><%= blog.content.substring(0, 100) %>...</p> <!-- Blog içeriğinin ilk 100 karakteri -->
+                    </div>
+                    <div class="tags-container-projects">
+                        <% blog.tags.forEach(tag => { %>
+                            <a href="#"><span><%= tag %></span></a>
+                        <% }) %>
+                    </div>
+                </div>
+                <a href="/blogs/<%= blog.title %>" id="projectLink">Blog Yazısına Git -></a>
+            </div>
+        <% }) %>
+    </section>
+
+    <footer>
+        <a href="index.html" id="footerLogo">Mustafa Kandemir</a>
+        <div class="socialMediaLinks">
+            <a href="#insta"><img src="images/instalogo.png" alt=""></a>
+            <a href="#linkedin"><img src="images/linkedinlogo.png" alt=""></a>
+            <a href="#x"><img src="images/twitterlogo.png" alt=""></a>
+            <a href="#facebook"><img src="images/facelogo.png" alt=""></a>
+        </div>
+        
+        <hr>
+
+        <div class="copyrighting">
+            <a href="">© 2024 Mustafa Kandemir. All rights reserved.</a>
+            <a href="">Privacy Policy</a>
+            <a href="">Terms of Service</a>
+            <a href="">Cookies Settings</a>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        /* Blog Section Styles */
+        .blog-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            font-family: "Dongle", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .blog-post {
+            width: 100%;
+            max-width: 800px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            padding: 40px;
+        }
+
+        .blog-post h1 {
+            color: #111111;
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #666666;
+            font-size: 28px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #e1e1e1;
+            padding-bottom: 15px;
+        }
+
+        .blog-post img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .blog-content {
+            margin-bottom: 30px;
+            text-align: justify; /* İsteğe bağlı: Metni iki yana yaslamak için */
+            word-wrap: break-word; /* Taşmayı engeller */
+            overflow-wrap: break-word; /* Modern tarayıcı desteği için */
+        }
+
+        .blog-content p {
+            color: #333333;
+            font-size: 32px;
+            line-height: 1;
+            margin: 0 auto; /* İçeriği ortalar */
+            max-width: 100%; /* İçeriğin dışarı taşmasını engeller */
+            word-wrap: break-word; /* Taşmayı engeller */
+            text-align: center; /* Metni ortalar */
+        }
+
+
+        .blog-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .blog-tags span {
+            background-color: #333333;
+            color: #ffffff;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-size: 28px;
+            transition: color 0.3s ease;
+        }
+
+        .blog-tags span:hover {
+            color: #FFD700;
+        }
+
+        /* Responsive Adjustments */
+        @media (min-width: 768px) {
+            .blog-section {
+                padding: 60px 20px;
+            }
+
+            .blog-post {
+                padding: 60px;
+            }
+
+            .blog-post h1 {
+                font-size: 54px;
+            }
+
+            .blog-meta {
+                font-size: 32px;
+            }
+
+            .blog-content p {
+                font-size: 36px;
+            }
+
+            .blog-tags span {
+                font-size: 32px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .blog-section {
+                padding: 80px 20px;
+            }
+
+            .blog-post {
+                max-width: 1000px;
+                padding: 80px;
+            }
+
+            .blog-post h1 {
+                font-size: 60px;
+            }
+
+            .blog-meta {
+                font-size: 36px;
+            }
+
+            .blog-content p {
+                font-size: 40px;
+            }
+
+            .blog-tags span {
+                font-size: 34px;
+            }
+        }
+    </style>
+
+</head>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="/index">Mustafa Kandemir</a>
+        </div>
+        <div id="mobile-menu" class="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-list">
+            <% if (cookies.admin_token && !cookies.token) { %>
+                <li><a href="/adminPage">Admin Paneli</a></li>
+            <% } %>
+            <li><a href="/index">Hakkımda</a></li>
+            <li><a href="/projelerim">Projeler</a></li>
+            <li><a href="/blogs">Blog</a></li>
+            <li><a href="/iletisim">İletişim</a></li>
+            <% if (cookies.token || cookies.admin_token) { %> 
+                <li><a href="/logout">Çıkış</a></li>
+            <% } else { %>
+                <li><a href="/login">Giriş / Kayıt Ol</a></li>
+            <% } %>
+        </ul>
+    </nav>
+</header>

@@ -1,0 +1,27 @@
+
+            <%- include('../../partials/header') %>
+            <main class="blog-section">
+                <article class="blog-post">
+                    <h1><%= blog.title %></h1>
+                    <div class="blog-meta">
+                        <span><%= blog.date ? blog.date.toDateString() : 'Tarih belirtilmedi' %></span>
+                        <span><%= blog.author %></span>
+                    </div>
+                    <% if (blog.image) { %>
+                        <img src="<%= blog.image %>" alt="Blog Görseli">
+                    <% } else { %>
+                        <img src="./images/default-image.png" alt="Varsayılan Blog Görseli">
+                    <% } %>
+                    <div class="blog-content">
+                        <p><%= blog.content %></p>
+                    </div>
+                    <div class="blog-tags">
+                        <% blog.tags.forEach(tag => { %>
+                            <span><%= tag %></span>
+                        <% }) %>
+                    </div>
+                </article>
+                <script src="script.js"></script>
+            </main>
+            <%- include('../../partials/footer') %>
+        

@@ -1,0 +1,346 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #ffffff;
+}
+html{
+    font-size: 10px;
+}
+a{
+    text-decoration: none;
+}
+
+/* NAVIGATION BAR */
+
+/* Genel stil ayarları */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #111111;
+    color: white;
+}
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.logo{
+
+    display: flex;
+    justify-content: start;
+    padding: 10px 20px;
+}
+.logo a{
+    text-decoration: none;
+    color: #FFD700;
+    font-size: 40px;
+    transition: color 0.3s;
+
+    font-family: "Dongle", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.logo a:hover{
+    color: #bba005;
+}
+.bar {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+    transition: all 0.3s;
+}
+
+/* Hamburger menü gizli - navbar öğeleri gizli */
+.nav-list {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+}
+
+.nav-list li {
+    margin: 5px 0;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: white;
+    font-size: 32px;
+    transition: color 0.3s;
+
+    font-family: "Dongle", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.nav-list a:hover {
+    color: #9ca6a7;
+}
+
+/* Hamburger menü aktifken */
+.menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav-list.active {
+    display: flex;
+}
+
+/* Projeler Kısmı */
+.projects {
+    display: flex;
+    flex-direction: column; /* Küçük ekranlarda dikey hizala */
+    align-items: center; 
+    justify-content: center;
+    padding: 40px 10px;
+
+}
+
+.projects h2 {
+    color: #111111;
+    font-size: 46px;
+    transition: color 0.3s;
+    margin-bottom: 20px; 
+    font-family: "Dongle", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.card {
+    border-style: solid;
+    border-width: 0.5px;
+
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    margin-bottom: 50px;
+    width: 100%; /* Kart genişliğini tam genişlikte tut */
+    max-width: 800px; /* Kartın maksimum genişliğini ayarla */
+}
+
+.card img {
+    width: 100%; 
+    max-width: 480px; 
+    margin: 0;
+    object-fit: cover; 
+
+}
+.projectsTexts p{
+    color: #333333;
+    font-size: 32px;
+    line-height: 1.2; /* Metin arası boşluk ayarı */
+    font-family: "Dongle", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 10px; 
+
+}
+.card .tags-container {
+    display: flex; /* Yan yana hizala */
+    gap: 10px; /* Etiketler arasına boşluk ekle */
+    margin-top: 20px;
+}
+.card span{
+
+    color: #ffffff;
+    font-size: 32px;
+    line-height: 1; /* Metin arası boşluk ayarı */
+    font-family: "Dongle", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 10px; 
+
+    background-color: #333333;
+    padding: 0 5px;
+    border-radius: 10px;
+}
+.card span:hover{
+    transition: 0.8s;
+    color: #FFD700;
+
+}
+#projectLink{
+    color: #333333;
+    font-size: 32px;
+    line-height: 1; /* Metin arası boşluk ayarı */
+    font-family: "Dongle", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 20px; 
+}
+#projectLink:hover{
+    transition: 1.5s;
+    text-decoration: underline;
+}
+
+
+/* FOOTER */
+footer{
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    padding: 40px 10px;
+}
+#footerLogo{
+    text-decoration: none;
+    color: #111111;
+    font-size: 40px;
+    transition: color 0.3s;
+
+    font-family: "Dongle", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+hr{
+    width: 80%;
+}
+.socialMediaLinks img{
+    width: 100%; 
+    max-width: 60px; 
+    margin: 0;
+    object-fit: cover; 
+
+    padding: 15px;
+}
+.copyrighting{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 20px;
+}
+.copyrighting a{
+    color: #111111;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+
+    padding-top: 10px;
+}
+
+
+/* RESPONSIVE - Daha geniş ekranlarda (min-width: 768px) */
+@media (min-width: 850px) {
+    
+    /* Projeler Kısmı */
+    .projects {
+        display: flex;
+        flex-direction: row; /* Küçük ekranlarda dikey hizala */
+        flex-wrap: wrap; /* Kartların taşmasını önle */
+        padding: 100px 30px;
+    }
+    .card {
+        margin-right: 40px;
+        width: 100%; /* Kart genişliğini tam genişlikte tut */
+        max-width: 480px; /* Kartın maksimum genişliğini ayarla */
+    }
+    .projectsTexts p{
+        margin: 10px; 
+    }
+    .projects h2 {
+        width: 100%; /* Başlığın genişliğini tam yap */
+        text-align: center; /* Başlığı ortala */
+        margin-bottom: 40px;
+
+        font-size: 54px;
+    }
+
+}
+
+
+
+/* RESPONSIVE - Daha büyük ekranlar için (min-width: 1200px) */
+@media (min-width: 1200px) {
+    .menu-toggle {
+        display: none; /* Hamburger menüyü gizle */
+    }
+
+    .nav-list {
+        display: flex; /* Menü öğelerini göster */
+        flex-direction: row; /* Menü öğelerini yatay hizala */
+    }
+    .nav-list li {
+        margin: 0 15px; /* Menü öğeleri arasına boşluk ekle */
+    }
+    .navbar {
+        padding: 20px 70px;
+    }
+    .nav-list li {
+        padding-right: 60px;
+    }
+    .nav-list li {
+        margin: 0 20px; /* Menü öğeleri arasındaki boşlukları artır */
+    }
+    .navbar {
+        padding: 20px 70px;
+    }
+    .nav-list li {
+        padding-right: 80px;
+    }
+
+    /* Projeler Kısmı */
+    .projects {
+        display: flex;
+        flex-direction: row; /* Küçük ekranlarda dikey hizala */
+        flex-wrap: wrap; /* Kartların taşmasını önle */
+        padding: 100px 30px;
+    }
+    .card {
+        width: 100%; /* Kart genişliğini tam genişlikte tut */
+        max-width: 480px; /* Kartın maksimum genişliğini ayarla */
+    }
+    .projectsTexts p{
+        margin: 10px; 
+    }
+    .projects h2 {
+        width: 100%; /* Başlığın genişliğini tam yap */
+        text-align: center; /* Başlığı ortala */
+        margin-bottom: 40px;
+
+        font-size: 54px;
+    }
+
+    
+
+    /* Footer */
+    footer{
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: row; 
+        align-items: center; 
+        justify-content: center;
+        padding: 60px 10px;
+    }
+    .copyrighting{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 20px;
+    }
+    .copyrighting a{
+        padding-right: 40px;
+
+    }
+
+
+
+    
+}
